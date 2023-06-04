@@ -81,7 +81,7 @@ function Chatbot() {
           </form>
         </div>
 
-        <div className="rounded-xl border border-b border-gray-300 bg-gray-200 bg-gradient-to-b from-zinc-200 p-4 pb-6 pt-8 backdrop-blur-2xl  transition-all dark:border-neutral-800 dark:bg-zinc-800/30  dark:from-inherit">
+        <div className="w-full rounded-xl border border-b border-gray-300 bg-gray-200 bg-gradient-to-b from-zinc-200 p-4 pb-6 pt-8 backdrop-blur-2xl  transition-all dark:border-neutral-800 dark:bg-zinc-800/30  dark:from-inherit">
           {(() => {
             switch (status.type) {
               case "idle":
@@ -93,7 +93,9 @@ function Chatbot() {
 
               case "loading":
                 return (
-                  <div className="h-20 w-20 animate-spin  rounded-full border-4 border-solid border-blue-600 border-t-transparent"></div>
+                  <div className="mx-auto flex w-80 items-center justify-center">
+                    <div className="h-20 w-20 animate-spin  rounded-full border-4 border-solid border-blue-600 border-t-transparent"></div>
+                  </div>
                 );
 
               case "loaded":
